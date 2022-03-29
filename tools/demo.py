@@ -179,7 +179,10 @@ class Predictor(object):
 
         cls = output[:, 6]
         scores = output[:, 4] * output[:, 5]
-
+        torch.save(output, '/content/output_tensor.pt') 
+        torch.save(cls, '/content/classes_tensor.pt') 
+        torch.save(scores, '/content/scores_tensor.pt') 
+        torch.save(bboxes, '/content/bboxes_tensor.pt') 
         vis_res = vis(img, bboxes, scores, cls, cls_conf, self.cls_names)
         return vis_res
 
