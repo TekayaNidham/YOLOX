@@ -216,7 +216,7 @@ def imageflow_demo(predictor, vis_folder, current_time, args):
     fps = cap.get(cv2.CAP_PROP_FPS)
     if args.save_result:
         save_folder = os.path.join(
-            vis_folder, time.strftime("%Y_%m_%d_%H_%M_%S", current_time)
+            vis_folder)
         )
         os.makedirs(save_folder, exist_ok=True)
         if args.demo == "video":
