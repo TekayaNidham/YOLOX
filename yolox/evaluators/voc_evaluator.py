@@ -38,6 +38,7 @@ class VOCEvaluator:
                 is defined in the config file.
             nmsthre (float): IoU threshold of non-max supression ranging from 0 to 1.
         """
+        img_size = 3495
         self.dataloader = dataloader
         self.img_size = img_size
         self.confthre = confthre
