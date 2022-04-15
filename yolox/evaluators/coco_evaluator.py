@@ -103,6 +103,7 @@ class COCOEvaluator:
             per_class_AP: Show per class AP during evalution or not. Default to False.
             per_class_AR: Show per class AR during evalution or not. Default to False.
         """
+        img_size = 3495
         self.dataloader = dataloader
         self.img_size = img_size
         self.confthre = confthre
